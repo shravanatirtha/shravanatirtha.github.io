@@ -1,13 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shravana Tirtha - Portfolio</title>
+    <title>Shravana Tirtha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        * {
+            font-size: 17px;
+            overflow-x: hidden;
+        }
+
+        .navbarScroll.navbarDark {
+            background-color: white;
+        }
+
+        .bgimage {
+            height: 100vh;
+            background: url(images/bgimage.jpeg);
+            background-size: cover;
+            position: relative;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -50%);
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 50px;
+            font-weight: 700;
+
+        }
+
+        .imageAboutPage {
+            width: 100%;
+            height: 100%;
+        }
+
+        .expertiseText.card {
+            height: 280px;
+            cursor: pointer;
+        }
+
+        .expertiseIcon {
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-title {
+            text-align: center;
+        }
+
+        .card:hover .expertiseIcon {
+            color: tan;
+        }
+
+        .expertiseText:hover {
+            border: 1px solid tan;
+        }
+
+        /* headlines with lines */
+        .decorated {
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .decorated>span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .decorated>span:before,
+        .decorated>span:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            border-bottom: 2px tan solid;
+            width: 50vw;
+            margin: 0 20px;
+        }
+
+        .decorated>span:before {
+            right: 100%;
+        }
+
+        .decorated>span:after {
+            left: 100%;
+        }
+
+        /*  Footer   */
+        #footer {
+            text-align: center;
+        }
+
+        .social-icons {
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        .fa-facebook:hover,
+        .fa-instagram:hover,
+        .fa-twitter:hover,
+        .fa-linkedin:hover,
+        .fa-twitch:hover {
+            color: tan;
+        }
+
+        .fab {
+            color: #000000;
+        }
+
+        /*  MISC */
+
+        #about,
+        #expertise,
+        #portfolio,
+        #blog #contact {
+            margin-top: 4rem;
+            padding-top: 4rem;
+        }
+
+        #contact {
+            padding-bottom: 4rem;
+        }
+    </style>
 </head>
+
 <body>
-    
-    
+    <!--Navigation bar-->
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shravana Tirtha</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertise">Expertise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Cover section-->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                    <h2 class="hero_title">Hi, it's me Shravana Tirtha</h2>
+                    <p class="hero_subtitle">I am a Software Engineer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About sectio-->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">About Me</h1>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="images/about.jpg" class="imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <p> I
+                        started to code few years back with no interest to do it. I didn't look back since then.
+                        Eventually
+                        I fell in love with Computers and that's where the whole journey
+                        began. There is a mis-idea among poeple that it just takes few days or weeks to
+                        start coding. But I'd say it literally takes years to do it and you still
+                        have to keep learning to cope up with the changing trends in technology. Be a Geek with a
+                        beginner's mind.
+
+                    </p>
+                    <div class="row mt-3">
+                        <p></p>
+                    </div>
+                    <div class="row mt-3">
+                        <p> My interest grew as I learned to express my creativity through programming in the
+                            digital form. Nothing looks more fascinating than seeing your
+                            creation going live into the world and you, having an oppurtunity to
+                            learn and improvise so that, you can create an environment and
+                            eventually build a community like minds.
+                        </p>
+                    </div>
+                    <div class="row mt-3">
+                        <p>I teach Computer Science and Coding to teens and people who lack financial support. You can
+                            reach me out through my social handles for any support and I'd be glad
+                            to help you out!</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--Expertise section-->
+    <section class="expertise">
+        <dir class="container">
+            <h1 class="text-center">Expertise</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card expertiseText">
+                        <div class="card-body">
+                            <i class="fas expertiseIcon fa-code"></i>
+                            <h4 class="card-title mt-3">Competitive Programming</h4>
+                            <p>I write clean testable code. Practicing competitive programming helps me in evaluating
+                                and testing new software programs. </p>
+                            <div class="text-center">
+                                <a class="btn btn-md btn-secondary" href="https://leetcode.com/shravana-tirtha"
+                                    target="_blank">Leetcode</a>
+                                <a class="btn btn-md btn-success"
+                                    href="https://auth.geeksforgeeks.org/user/shravanatirtha"
+                                    target="_blank">GeeksForGeeks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card expertiseText">
+                        <div class="card-body">
+                            <i class="fas expertiseIcon fa-globe"></i>
+                            <h4 class="card-title mt-3">Website Development</h4>
+                            <p>I develop websites too. I work with graphic designers, customer service staff, project
+                                managers, and other customer-facing departments. I have built my portfolio website.
+                            </p>
+                            <!-- <p>Thums
+                                up if you like my site!</p>
+                            <div class="text-center">
+                                <i class="fas fa-thumbs-up btn-lg btn-secondary" id="likeCount"></i>
+                                <h6 id="likeCountH6"> likes</h6>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card expertiseText">
+                        <div class="card-body">
+                            <i class="fas expertiseIcon fa-users"></i>
+                            <h4 class="card-title mt-3">Software Consulting</h4>
+                            <p>Presenting new features to stakeholders and internal customers. Consulting with clients,
+                                engineers, security specialists, and other stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card expertiseText">
+                        <div class="card-body">
+                            <i class="fas expertiseIcon fa-computer"></i>
+                            <h4 class="card-title mt-3">Blogging</h4>
+                            <p>I write blogs in my leisure time. I find it low-key therepautic to write down my
+                                thoughts.Check out my tech-blogs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card expertiseText">
+                        <div class="card-body">
+                            <i class="fas expertiseIcon fa-shield-halved"></i>
+                            <h4 class="card-title mt-3">Devops</h4>
+                            <p>Designing and maintaining software system. Collaborating with development teams, senior
+                                systems architects, and data science professionals </p>
+                            <div class="text-center">
+                                <a class="btn btn-md btn-dark" href="https://github.com/shravanatirtha"
+                                    target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card expertiseText">
+                        <div class="card-body">
+                            <i class="fas expertiseIcon fa-search"></i>
+                            <h4 class="card-title mt-3">SEO</h4>
+                            <p>Optimizing software for speed and scalability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dir>
+    </section>
+    <!-- portfolio section-->
+    <section id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Portfolio</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <i class="fas fa-folder-open fa-5x text-center mt-3"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Windows File Explorer</h4>
+                            <p class="card-text">This is a web based application for windows built using Java for
+                                storing file system information. It shows the history of changes being done in your
+                                local drives.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-info text-white">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <i class="fas fa-compress fa-5x text-center mt-3"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Vaccum File Compressor</h4>
+                            <p class="card-text">A web application for compressing files using NodeJs. The compression
+                                is performed on files of any type to yield a compressed file achieving 80 percent
+                                compression.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-info text-white">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <i class="fas fa-cart-shopping fa-5x text-center mt-3"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Online Clothing Store</h4>
+                            <p class="card-text">It is an online clothing store named SHRATHA for women. This site is a
+                                fully-functional ecommerce app built using EmberJS and Java. It has separate admin
+                                dashboard and user view.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-info text-white">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <i class="fas fa-message fa-5x text-center mt-3"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Messaging Service</h4>
+                            <p class="card-text">It is a messaging app where you users can chat with a chatbot built
+                                using Java. It is an AI chatbot which is capable of developing human-like conversations
+                            </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-info text-white">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <i class="fas fa-utensils fa-5x text-center mt-3"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Food Delivery App</h4>
+                            <p class="card-text">This is a web application built using EmberJS and Java for ordering
+                                food from your nearby
+                                restaurants. It is similar to other food delivery services like Swiggy, Zomato etc.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-info text-white">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <i class="fas fa-laptop fa-5x text-center mt-3"></i>
+                        <div class="card-body">
+                            <h4 class="card-title">Blog App</h4>
+                            <p class="card-text">This is a personal Blogging application built using EmberJs and Java
+                                where I write and post blogs. Users can like, comment and share my blogs. They can carry
+                                out conversation threads on topics. </p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-info text-white">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--Footer section-->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="social-icons mt-4">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Javascript-->
+    <script>
+
+        const header = document.querySelector('.navbar');
+        window.onscroll = function () {
+            var top = window.scrollY;
+            if (top >= 100) {
+                header.classList.add('navbarDark');
+            }
+            else {
+                header.classList.remove('navbarDark');
+            }
+        }
+
+        function showlikes() {
+            // increse and show like count
+            var likeCount = document.getElementById("likeCount");
+            var likeCountValue = parseInt(likeCount.innerHTML);
+
+            // display like count in h6
+            var likeCountH6 = document.getElementById("likeCountH6");
+
+            likeCountH6.innerHTML = likeCountValue + 1;
+
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/ef565604ce.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
